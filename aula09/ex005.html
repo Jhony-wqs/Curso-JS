@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos no DOM</title>
+    <style>
+        body{
+            background:rgba(21, 21, 194, 0.507) ;
+            color: white;
+            font: normal 15pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="texto">Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Apredendo a usar o<strong> DOM </strong>em javaScript</p>
+    <div id="msg">Cliqui em mim</div>
+
+    <script>
+        //uso de váriaveis para manipular o html
+        var t = window.document.querySelector('h1#texto')//usando metodo mais avançado , pode usar class também e so usar o . e o nome da calss 
+        var d = window.document.getElementById("msg")
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName("p")[0] // para pegar o elemnto no get no plural tem usar [] esse parenteses
+         document.write( p1.innerText) //para pegar o texto 
+       corpo.style.background = "blue"
+       d.innerHTML='estou aqui'//mudando o texto simplificando o caminho
+       d.style.background='green'//mudando a cor do fundo 
+       t.style.background ='red'
+       t.innerHTML="mudei o texto por DOM no javaScript" 
+    </script>
+</body>
+</html>
