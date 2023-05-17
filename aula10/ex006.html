@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento DOM</title>
+
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background-color: rgba(3, 138, 3, 0.733);
+            color: #ffff;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- coloca esses elementos dentro da tag , onclick="clicar() " onmouseenter="entrar()" onmouseout="saiu()" -->
+     <div id="area">
+          Interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area') 
+        a.addEventListener('click',clicar)// coloca entre parenteses e aspas o evento mais o chamado da função
+        a.addEventListener('mouseenter',entrar) // coloca entre parenteses e aspas o evento mais o chamado da função
+        a.addEventListener('mouseout',saiu) // coloca entre parenteses e aspas o evento mais o chamado da função  
+        function clicar(){
+       a.innerHTML =' clicou'
+       a.style.background='red'
+
+        }
+        function entrar(){
+            a.innerHTML='entrou...'
+        }
+        function saiu(){
+            a.innerHTML='saiu'
+            a.style.background=' rgba(3, 138, 3, 0.733)'
+        }
+    </script>
+</body>
+</html>
