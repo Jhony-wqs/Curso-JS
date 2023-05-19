@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Nacionalidade </title>
+    <style>
+        div#br{
+            width: 400px;
+            height: 300px;
+            background-color: darkgray;
+        }
+        h1{
+            text-align: center;
+        }
+        div#nac{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="br">
+        <h1>Nacionalidade</h1> Pais de origem
+        <input type="text" name="txtn" id="txtn">
+        <input type="button" value="Consulta" onclick="consulta()">
+        <div id="nac"></div>
+    </div>
+    <script>
+        function consulta(){
+            var n = window.document.getElementById('txtn')
+            var n = String(txtn.value)
+            var nac = window.document.getElementById('nac')
+            nac.innerHTML = `Pais de Origem  ${n},`
+            if(n == "Brasil"){
+                nac.innerHTML += ` sua nacionalidade e Brasileira`
+            } else{
+                nac.innerHTML += ` voçê e estrangeiro ,mais seja bem vindo !!!!`
+            }
+        }
+    </script>
+</body>
+</html>

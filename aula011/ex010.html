@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detrant</title>
+</head>
+<body>
+    <h1>Sistema de multa</h1>Velocidade
+    do carro -
+    <input type="number" name="txtvel" id="txtvel">Km/h
+    <input type="button" value="Consultar" onclick="consulta()">
+    <div id="res"></div>
+    <script>
+        function consulta() {
+            var vel = window.document.querySelector('input#txtvel')
+             vel = Number(txtvel.value)
+             var res = window.document.getElementById('res')
+             res.innerHTML = `<p>Sua velocidade atual e de <strong>${vel}Km/h</strong></p>`
+             if(vel > 60){
+                res.innerHTML += `Sua velicidade foi de ${vel}Km/h voçê foi <estrong>MULTADO</estrong> por execesso de velocidade `
+             }else{
+                res.innerHTML += `Sua velicidade foi de ${vel} voçê não tem multas`
+             }
+        }
+
+    </script>
+</body>
+</html>
