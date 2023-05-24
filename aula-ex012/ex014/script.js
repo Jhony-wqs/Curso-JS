@@ -3,7 +3,7 @@ function carregando (){
     var msg = window.document.getElementById('msg')
     var foto = window.document.getElementById('foto')
     var hora = new Date()
-    var hr = 12//hora.getHours()
+    var hr = hora.getHours()
     msg.innerHTML =`Agora são ${hr}: horas`
     if(hr > 0 && hr < 12){
         dia.innerHTML = 'Bom dia !!!'
