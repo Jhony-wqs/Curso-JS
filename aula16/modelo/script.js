@@ -10,6 +10,9 @@ function clicar() {
         let i = Number(cx1.value)
         let f = Number(cx2.value)
         let p = Number(pas.value)
+        if(p <=0){
+            alert('[ERRO] Passo inválido')
+        }
         if(i < f){
             for(let c = i;c <= f;c += p){
                 res.innerHTML +=`\u{1f449}${c}`
